@@ -20,8 +20,8 @@ const skills = [
   {
     icon: "💻",
     title: "Programación",
-    description: "Java, Python, JavaScript",
-    detail: "Desarrollo de aplicaciones web y de escritorio con enfoque en código limpio y buenas prácticas.",
+    description: "Java, Python, HTML",
+    detail: "Desarrollo de aplicaciones y páginas web con Java, Python y HTML, enfocada en código limpio y buenas prácticas.",
     color: "from-pink-400 to-rose-500",
     bg: "bg-pink-50",
     border: "border-pink-200",
@@ -30,28 +30,18 @@ const skills = [
   {
     icon: "🤝",
     title: "Trabajo en equipo",
-    description: "Comunicación, liderazgo",
-    detail: "Experiencia colaborando en proyectos ágiles, con habilidades de comunicación efectiva y liderazgo.",
+    description: "Scrum, comunicación efectiva",
+    detail: "Excelente para trabajar en equipo con conocimiento en metodología Scrum y habilidades de comunicación efectiva.",
     color: "from-purple-400 to-violet-600",
     bg: "bg-purple-50",
     border: "border-purple-200",
     text: "text-purple-600",
   },
   {
-    icon: "✨",
-    title: "Creatividad",
-    description: "Soluciones innovadoras",
-    detail: "Capacidad para pensar fuera de la caja y proponer soluciones creativas a problemas complejos.",
-    color: "from-yellow-400 to-amber-500",
-    bg: "bg-yellow-50",
-    border: "border-yellow-200",
-    text: "text-yellow-600",
-  },
-  {
     icon: "🎨",
     title: "Diseño UI/UX",
-    description: "Figma, Tailwind CSS",
-    detail: "Diseño de interfaces intuitivas y atractivas centradas en la experiencia del usuario.",
+    description: "Figma, interfaces intuitivas",
+    detail: "Diseño de interfaces atractivas e intuitivas centradas en la experiencia del usuario usando Figma.",
     color: "from-fuchsia-400 to-pink-500",
     bg: "bg-fuchsia-50",
     border: "border-fuchsia-200",
@@ -60,32 +50,42 @@ const skills = [
   {
     icon: "🗄️",
     title: "Bases de datos",
-    description: "MySQL, PostgreSQL",
-    detail: "Modelado, consultas y administración de bases de datos relacionales.",
+    description: "Modelado y consultas SQL",
+    detail: "Conocimiento en modelado, consultas y administración de bases de datos relacionales.",
     color: "from-violet-400 to-purple-600",
     bg: "bg-violet-50",
     border: "border-violet-200",
     text: "text-violet-600",
   },
+  {
+    icon: "⚙️",
+    title: "Automatización",
+    description: "Sensores, control de sistemas",
+    detail: "Conocimientos en sistemas de control, automatización y manejo de sensores aplicados a la ingeniería.",
+    color: "from-yellow-400 to-amber-500",
+    bg: "bg-yellow-50",
+    border: "border-yellow-200",
+    text: "text-yellow-600",
+  },
 ];
 
 const projects = [
   {
-    title: "Portafolio Web",
-    description: "Hoja de vida interactiva desarrollada con Next.js y Tailwind CSS.",
+    title: "CV Web",
+    description: "Currículum vitae interactivo y responsivo desarrollado con Next.js y Tailwind CSS.",
     tags: ["Next.js", "Tailwind", "React"],
     color: "from-pink-400 to-purple-500",
   },
   {
-    title: "App de Gestión",
-    description: "Sistema de gestión documental con autenticación y panel de control.",
-    tags: ["Java", "MySQL", "Spring"],
+    title: "Gestión de Supermercado",
+    description: "Sistema de gestión de productos y compras con integración de pasarelas de pago mediante APIs.",
+    tags: ["Java", "APIs", "Pagos"],
     color: "from-purple-400 to-violet-600",
   },
   {
-    title: "Proyecto Creativo",
-    description: "Aplicación web con enfoque en diseño y experiencia de usuario.",
-    tags: ["JavaScript", "CSS", "Figma"],
+    title: "Gestión de Salones",
+    description: "Sistema para automatizar la asignación de salones en una universidad aplicando investigación de operaciones.",
+    tags: ["Investigación de Operaciones", "Java", "Automatización"],
     color: "from-yellow-400 to-pink-400",
   },
 ];
@@ -213,7 +213,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-4 text-lg md:text-xl text-white/80 font-light">
-            Ingeniera en formación · Desarrolladora Web · Creativa
+            Ingeniería en Sistemas · Aprendiz SENA · Desarrolladora Web
           </p>
 
           <div className="mt-8 flex gap-4 flex-wrap justify-center">
@@ -251,15 +251,15 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-5 text-gray-600 leading-relaxed text-[1.05rem]">
               <p>
-                Hola, soy <span className="font-semibold text-purple-700">Alexa</span>, una ingeniera en formación
-                apasionada por la tecnología, la creatividad y el desarrollo de soluciones digitales.
+                Hola, soy <span className="font-semibold text-purple-700">Alexa</span>, estudiante de Ingeniería en Sistemas
+                y aprendiz del SENA en Técnico en Asistencia Administrativa. Me apasiona la tecnología y el desarrollo de soluciones digitales.
               </p>
               <p>
-                Me encanta construir experiencias web que combinen funcionalidad con buen diseño.
-                Creo que el código puede ser tan creativo como cualquier otra forma de arte.
+                Soy muy perfeccionista y me interesa mucho mi carrera. Me encanta lo que estoy aprendiendo,
+                desde programación hasta automatización y diseño de interfaces.
               </p>
               <p>
-                Este espacio refleja mi crecimiento, mis habilidades y mi forma de ver el mundo
+                Cuento con conocimientos de inglés en nivel B1 y disfruto seguir creciendo cada día
                 desde la ingeniería 💻💜
               </p>
               <button
@@ -272,10 +272,10 @@ export default function Home() {
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: "Lenguajes", value: "Java · Python · JS", icon: "💻" },
-                { label: "Diseño", value: "Figma · Tailwind", icon: "🎨" },
-                { label: "Bases de datos", value: "MySQL · PostgreSQL", icon: "🗄️" },
-                { label: "Soft skills", value: "Liderazgo · Creatividad", icon: "🌟" },
+                { label: "Lenguajes", value: "Java · Python · HTML", icon: "💻" },
+                { label: "Diseño", value: "Figma", icon: "🎨" },
+                { label: "Bases de datos", value: "SQL · Modelado", icon: "🗄️" },
+                { label: "Soft skills", value: "Scrum · Perfeccionismo · Inglés B1", icon: "🌟" },
               ].map((item) => (
                 <div
                   key={item.label}
@@ -386,7 +386,7 @@ export default function Home() {
               { icon: <FaGithub />, href: "https://github.com/Alexa-915", label: "GitHub", hover: "hover:bg-white/20" },
               { icon: <FaLinkedin />, href: "https://linkedin.com/in/alexa-sofia-galeano-betancourt-14b466368", label: "LinkedIn", hover: "hover:bg-white/20" },
               { icon: <FaInstagram />, href: "https://instagram.com/alexasofiagaleano", label: "Instagram", hover: "hover:bg-white/20" },
-              { icon: <FaEnvelope />, href: "mailto:alexa@example.com", label: "Email", hover: "hover:bg-white/20" },
+              { icon: <FaEnvelope />, href: "https://mail.google.com/mail/?view=cm&to=alexagaleano@estudiantesunibague.edu.co", label: "Email", hover: "hover:bg-white/20" },
             ].map((social) => (
               <a
                 key={social.label}
@@ -402,11 +402,40 @@ export default function Home() {
           </div>
 
           <a
-            href="mailto:alexa@example.com"
+            href="https://mail.google.com/mail/?view=cm&to=alexagaleano@estudiantesunibague.edu.co"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-10 inline-block px-8 py-4 bg-white text-purple-700 font-bold rounded-full shadow-lg hover:shadow-white/30 hover:scale-105 transition-all duration-300"
           >
             Envíame un mensaje ✉️
           </a>
+        </div>
+      </section>
+
+      {/* ── IDIOMAS ── */}
+      <section className="py-16 px-6 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div className="max-w-2xl mx-auto text-center">
+          <span className="text-sm font-semibold text-purple-500 uppercase tracking-widest">Comunicación</span>
+          <h2 className="mt-2 text-3xl font-bold text-gray-900">Idiomas 🌐</h2>
+          <div className="mt-4 h-1 w-16 bg-gradient-to-r from-purple-400 to-pink-500 mx-auto rounded-full" />
+          <div className="mt-10 flex justify-center gap-6 flex-wrap">
+            {[
+              { lang: "Español", level: "Nativo", flag: "🇨🇴", pct: 100 },
+              { lang: "Inglés", level: "B1 — Intermedio", flag: "🇬🇧", pct: 50 },
+            ].map((item) => (
+              <div key={item.lang} className="bg-white border border-purple-100 rounded-2xl p-6 shadow-sm w-56 text-left">
+                <p className="text-2xl">{item.flag}</p>
+                <p className="mt-2 font-bold text-gray-800">{item.lang}</p>
+                <p className="text-sm text-purple-500 font-medium">{item.level}</p>
+                <div className="mt-3 h-2 w-full bg-purple-100 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-gradient-to-r from-pink-400 to-purple-500 rounded-full"
+                    style={{ width: `${item.pct}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
